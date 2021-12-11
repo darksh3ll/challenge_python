@@ -1,3 +1,4 @@
+
 """
 Un mot de passe valide se compose de :
  - 6 caractéres de type number
@@ -23,3 +24,5 @@ def valide_password(password):
 
 
 print(valide_password("8a77"))
+
+
