@@ -2,7 +2,7 @@ import requests
 from time import sleep
 
 
-def check_internet():
+def check_internet_connection():
     url = "https://www.google.com"
     timeout = 5
     try:
@@ -12,21 +12,21 @@ def check_internet():
         return False
 
 
-def get_datas():
-    if check_internet():
-        r = requests.get('https://jsonplaceholder.typicode.com/todos/1')
-        print(r.json())
+def get_todo_to_api():
+    if check_internet_connection():
+        response = requests.get('https://jsonplaceholder.typicode.com/todos/1')
+        print(response.json())
     else:
-        print('Pas de connexion internet')
+        print('No internet connection')
 
 
-def main():
+def app():
     try:
         while True:
-            get_datas()
+            get_todo_to_api()
             sleep(5)
     except KeyboardInterrupt:
-        print("fin du programme")
+        print("End of the programme")
 
 
-main()
+app()
