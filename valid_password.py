@@ -23,6 +23,8 @@ def valide_password(password):
     return numbers == 6 and minuscules == 1 and majuscules == 1
 
 
-print(valide_password("8a77"))
+print(valide_password(""))
 
 
+def toto(ldlsdk):
+    pass
