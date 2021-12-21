@@ -5,6 +5,7 @@ os.system("sudo nmap -sP 192.168.0/24")
 
 """
 trouver l'ip de la machine
-l'ancer un scan
+lancer un scan
+recuperer l'ip de philips hue avec le nom d'hotes
 
 """
