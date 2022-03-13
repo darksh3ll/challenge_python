@@ -11,3 +11,4 @@ a = [12,23,47]
 foo = [x for x in a if x %2 == 1]
 print(foo)
 
+

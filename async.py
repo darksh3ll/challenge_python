@@ -1,27 +1,33 @@
+from time import sleep
 import asyncio
 
 
-def gg():
-    print("ffddsfdsf")
+# Asyncio permet d’exécuter plusieurs sections de code (des fonctions, dites « coroutines »)
+# de manière asynchrone. Quand une section de code termine (ou suspend) son exécution,
+# alors Asyncio peut passer la main à une autre section de code à exécuter.
+
+# async def print_this(s, time_ms):
+#     while True:
+#         await asyncio.sleep(time_ms)
+#         print(s)
+#
+#
+# loop = asyncio.get_event_loop()
+# loop.create_task(print_this("1 secondes", 1))
+# loop.create_task(print_this("10 secondes", 10))
+#
+# loop.run_forever()
+# loop.close()
 
 
-async def hello():
-    await asyncio.sleep(5)
-    print("hello")
+async def say_hello(s, time_s):
+    while True:
+        await asyncio.sleep(time_s)
+        print(s)
 
 
-async def main():
-    await asyncio.sleep(1)
-    print('... World!')
-
-
-async def foo():
-    await asyncio.sleep(10)
-    print("foo")
-
-
-# Python 3.7+
-asyncio.run(hello())
-asyncio.run(foo())
-asyncio.run(main())
-gg()
+loop = asyncio.get_event_loop()
+loop.create_task(say_hello("1", 1))
+loop.create_task(say_hello("2", 1))
+loop.run_forever()
+loop.close()
