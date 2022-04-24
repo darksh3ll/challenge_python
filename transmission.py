@@ -25,6 +25,3 @@ def parcourir_mot():
         for letter in mot:
             parcourir_scrable(letter)
 
-def main():
-    
-parcourir_mot()
