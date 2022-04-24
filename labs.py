@@ -1,14 +1,14 @@
-import json
-BODY_PRIMARY = {"deviceid": "", "data": {}}
+lettres = (
+    (("e","a",'i','o','n','r','t','l','s','u'),(1)) ,
+    (("d","g"),(2)), 
+    (("b","c","m","p"),(3)), 
+    (("f","h","v","w","y"),(4)), 
+    (("k"),(5)), 
+    (("j","x"),(8)), 
+    (("k","z"),(10))
+    )
 
-status = "on"
-BODY_PRIMARY["data"] = dict({"switch": status})
+mot = ["because","first","these","could","which","hicquwh"]
 
-print(BODY_PRIMARY)
-
-a = [12,23,47]
-
-foo = [x for x in a if x %2 == 1]
-print(foo)
-
-
+for i in lettres:
+    print(i)

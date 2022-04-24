@@ -17,3 +17,4 @@ print("""
 
 """)
 print(is_mutiple_two())
+

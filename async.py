@@ -1,4 +1,4 @@
-from time import sleep
+import time
 import asyncio
 
 
@@ -20,14 +20,16 @@ import asyncio
 # loop.close()
 
 
-async def say_hello(s, time_s):
-    while True:
-        await asyncio.sleep(time_s)
-        print(s)
+async def say_after(delay, what):
+    await asyncio.sleep(delay)
+    print(what)
 
 
-loop = asyncio.get_event_loop()
-loop.create_task(say_hello("1", 1))
-loop.create_task(say_hello("2", 1))
-loop.run_forever()
-loop.close()
+async def main():
+    print(f"started at {time.strftime('%X')}")
+    await say_after(1, 'hello')
+    await say_after(5, 'world')
+    print(f"finished at {time.strftime('%X')}")
+
+
+asyncio.run(main())
