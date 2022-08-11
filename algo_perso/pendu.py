@@ -1,11 +1,11 @@
-world_to_find = "maison"
-world_hide = list("_" * len(world_to_find))
-mot_deja_trouver = []
+def modify_multiply(st, loc, num):
+    foo = (st.split()[loc] + "-") * num
+    return foo[:-1]
 
-while "_" in world_hide:
-    a = input("Entre une lettre: ")
-    for i, count in enumerate(world_to_find):
-        if count == a:
-            world_hide[i] = count
-    print(world_hide)
 
+modify_multiply("This is a string", 3, 5)
+
+
+# solution code ware
+def modify_multiply(st, loc, num):
+    return '-'.join([st.split()[loc]] * num)
