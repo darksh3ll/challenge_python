@@ -7,12 +7,14 @@ def modify_multiply(st, loc, num):
 
 
 # solution code ware
-def modify_multiply(st, loc, num):
-    return '-'.join([st.split()[loc]] * num)
+# def modify_multiply(st, loc, num):
+#     return '-'.join([st.split()[loc]] * num)
 
 
 def solution(n):
-    return 7
+    pass
 
 
 print(solution(4))
+
+
